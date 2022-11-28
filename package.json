@@ -1,0 +1,22 @@
+{
+  "name": "cuke-qa",
+  "version": "0.1.0",
+  "description": "A basic testbed for validation of website analytics instrumentation",
+  "main": "index.js",
+  "scripts": {
+    "cucumber": "cucumber-js features -f json:cucumber-report.json --tags 'not @ignore'",
+    "test": "NODE_ENV=development npm run cucumber",
+    "report": "node scripts/report.js"
+  },
+  "keywords": [],
+  "author": "charlie.tysse@searchdiscovery.com",
+  "license": "ISC",
+  "devDependencies": {
+    "@cucumber/cucumber": "^8.0.0-rc.1",
+    "cucumber-html-reporter": "^5.5.0",
+    "puppeteer": "^13.0.0"
+  },
+  "engines": {
+    "node": ">18.0.0 & <19.0.0"
+  }
+}
